@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Gazgakh!</title>
+
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+		<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Pangolin&amp;subset=latin-ext" rel="stylesheet">
+	</head>
+	<body id="base" class="bg-dark">
+			<div class="container bg-warning borderRadio p-5 mt-5">
+				<div class="row">
+					<div class="col text-center">
+						<div class="display-1">
+							<b class="titulo">Gazgakh</b>
+						</div>
+					</div>
+				</div>
+				<div class="row m-2">
+					<div class="col"></div>
+					<div class="col-6 justify-content-center">
+						<p class="text-justify">
+							Gazgakh es un juego donde compites contra tus amigos para ver quién puede escribir más palabras que los demás en menos tiempo.
+							<br>
+							Gazgakh viene de la lengua negra de mordor que significa "Detente" o, en este caso, <b>"Basta"</b>.
+							<br>
+							Para comenzar a jugar. Escoge un nombre por el que tus amigos te identificaran.
+						</p>
+					</div>
+					<div class="col"></div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<form name="no me importa" class="form-inline justify-content-center" method="POST" action="">
+							<input type="text" class="form-control" placeholder="Usuario" id="username">
+							&nbsp;
+							<button type="button" class="btn btn-dark" onclick="joinChat()">Entrar</button>
+						</form>
+					</div>
+				</div>
+			</div>
+
+		<script>
+		function joinChat() {
+			var username = document.querySelector('#username').value;
+			if (username.length <= 0) {
+				alert('El nombre de usuario es requerido.');
+			} else {
+				window.location = '/chat/' + username;
+			}
+		}
+		</script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+		<script src="js/bootstrap.js"></script>
+	</body>
+</html>
